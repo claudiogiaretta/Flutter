@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -17,6 +18,7 @@ class Home extends StatelessWidget {
             Image.asset(
               'assets/assets_quiz/images/quiz-logo.png',
               width: 500,
+              color: const Color.fromARGB(128, 255, 255, 255),
             ),
             const SizedBox(
               height: 40,
@@ -31,15 +33,18 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            OutlinedButton(
-              onPressed: startQuiz,
-              child: const Text(
-                "Start Quiz",
-                style: TextStyle(
-                  color: Colors.white,
+            OutlinedButton.icon(
+                onPressed: startQuiz,
+                label: const Text(
+                  "Start Quiz",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-            )
+                icon: const Icon(
+                  Icons.arrow_right_alt_outlined,
+                  color: Colors.white,
+                ))
           ],
         ),
       ),
