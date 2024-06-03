@@ -4,7 +4,7 @@ import 'package:hello_world/quiz_app/home.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
         body: Home(),
       ),

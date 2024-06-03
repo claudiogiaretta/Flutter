@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Home extends StatelessWidget {
+  const Home({super.key});
   void startQuiz() {}
 
   @override
@@ -12,8 +12,12 @@ class Home extends StatelessWidget {
       ),
       child: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset('assets/assets_quiz/images/quiz-logo.png'),
+            Image.asset(
+              'assets/assets_quiz/images/quiz-logo.png',
+              width: 500,
+            ),
             const SizedBox(
               height: 40,
             ),
@@ -27,7 +31,7 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            TextButton(
+            OutlinedButton(
               onPressed: startQuiz,
               child: const Text(
                 "Start Quiz",
