@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/GradientCointainer.dart';
+import 'package:hello_world/dice_roller/gradient_cointainer.dart';
 
 void main() {
   runApp(
