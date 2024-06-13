@@ -10,6 +10,7 @@ class StartScreen extends StatelessWidget {
   Widget build(context) {
     return Center(
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
             'assets/assets_quiz/images/quiz-logo.png',
