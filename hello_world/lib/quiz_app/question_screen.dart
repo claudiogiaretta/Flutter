@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:hello_world/quiz_app/answer.dart';
 import 'package:hello_world/quiz_app/data/questions.dart';
-=======
->>>>>>> f48c4bd62e490c18098bd7d211e5bb13dcb8af1c
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
@@ -15,10 +12,18 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
-  final currentQuestion = questions[0];
+  int currentQuestionIndex = 0;
+
+  void updateCurrentQuestion() {
+    setState(() {
+      currentQuestionIndex++;
+    });
+  }
 
   @override
   Widget build(context) {
+    final currentQuestion = questions[currentQuestionIndex];
+
     return SizedBox(
       width: double.infinity,
       child: Container(
@@ -33,13 +38,13 @@ class _QuestionScreenState extends State<QuestionScreen> {
               ),
             ),
             const SizedBox(height: 30),
-            ...currentQuestion.answers.map(
+            ...currentQuestion.getShuffledList().map(
               (answer) {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const SizedBox(height: 30),
-                    Answer(answer, () {}),
+                    Answer(answer, updateCurrentQuestion),
                   ],
                 );
               },
