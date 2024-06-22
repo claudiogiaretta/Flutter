@@ -24,20 +24,23 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text('You answered correctly...'),
-          const SizedBox(height: 30),
-          QuestionSummary(getSummary()),
-          const SizedBox(height: 30),
-          TextButton(
-            onPressed: () {},
-            child: const Text('Restart quiz'),
-          ),
-        ],
+    return SizedBox(
+      width: double.infinity,
+      child: Container(
+        margin: const EdgeInsets.all(40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('You answered correctly...'),
+            const SizedBox(height: 30),
+            QuestionSummary(getSummary()),
+            const SizedBox(height: 30),
+            TextButton(
+              onPressed: () {},
+              child: const Text('Restart quiz'),
+            ),
+          ],
+        ),
       ),
     );
   }
