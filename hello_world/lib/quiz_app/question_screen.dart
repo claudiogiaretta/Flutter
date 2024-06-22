@@ -4,7 +4,9 @@ import 'package:hello_world/quiz_app/answer.dart';
 import 'package:hello_world/quiz_app/data/questions.dart';
 
 class QuestionScreen extends StatefulWidget {
-  const QuestionScreen({super.key});
+  const QuestionScreen(this.saveSelectedAnwer, {super.key});
+
+  final void Function(String answer) saveSelectedAnwer;
 
   @override
   State<StatefulWidget> createState() {
@@ -15,7 +17,9 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreenState extends State<QuestionScreen> {
   int currentQuestionIndex = 0;
 
-  void updateCurrentQuestion() {
+  void updateCurrentQuestion(String answer) {
+    widget.saveSelectedAnwer(answer);
+
     setState(() {
       currentQuestionIndex++;
     });
@@ -46,7 +50,12 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const SizedBox(height: 30),
-                    Answer(answer, updateCurrentQuestion),
+                    Answer(
+                      answer,
+                      () {
+                        updateCurrentQuestion(answer);
+                      },
+                    ),
                   ],
                 );
               },
