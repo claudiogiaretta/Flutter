@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class QuestionSummary extends StatelessWidget {
-  QuestionSummary(this.summary, {super.key});
+  const QuestionSummary(this.summary, {super.key});
 
-  List<Map<String, Object>> summary;
+  final List<Map<String, Object>> summary;
 
   Color getAnswerColor(String userAnswer, String correctAnswer) {
     if (userAnswer == correctAnswer) {
-      return Color.fromARGB(255, 78, 125, 206);
+      return const Color.fromARGB(255, 78, 125, 206);
     }
-    return Color.fromARGB(255, 206, 87, 78);
+    return const Color.fromARGB(255, 206, 87, 78);
   }
 
   @override
