@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training_apps/dice_roller/gradient_cointainer.dart';
 import 'package:flutter_training_apps/holiday_app/model/category.dart';
 
 class Categoryitem extends StatelessWidget {

@@ -10,6 +10,8 @@ List<Trip> trips = [
     categories: ['Beach', 'Luxury'],
     startDate: DateTime(2024, 7, 1),
     endDate: DateTime(2024, 7, 10),
+    imageURL:
+        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ),
   Trip(
     id: '2',
@@ -21,6 +23,8 @@ List<Trip> trips = [
     categories: ['Mountain', 'Adventure'],
     startDate: DateTime(2024, 8, 15),
     endDate: DateTime(2024, 8, 25),
+    imageURL:
+        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ),
   Trip(
     id: '3',
@@ -31,6 +35,8 @@ List<Trip> trips = [
     categories: ['City Break', 'Historical', 'Cultural'],
     startDate: DateTime(2024, 9, 10),
     endDate: DateTime(2024, 9, 20),
+    imageURL:
+        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ),
   Trip(
     id: '4',
@@ -41,6 +47,8 @@ List<Trip> trips = [
     categories: ['Safari', 'Adventure'],
     startDate: DateTime(2024, 7, 20),
     endDate: DateTime(2024, 7, 30),
+    imageURL:
+        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ),
   Trip(
     id: '5',
@@ -51,6 +59,8 @@ List<Trip> trips = [
     categories: ['Cultural', 'City Break'],
     startDate: DateTime(2024, 10, 1),
     endDate: DateTime(2024, 10, 10),
+    imageURL:
+        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ),
   Trip(
     id: '6',
@@ -61,6 +71,8 @@ List<Trip> trips = [
     categories: ['Cruise', 'Luxury'],
     startDate: DateTime(2024, 6, 15),
     endDate: DateTime(2024, 6, 25),
+    imageURL:
+        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ),
   Trip(
     id: '7',
@@ -72,6 +84,8 @@ List<Trip> trips = [
     categories: ['Eco-Tourism', 'Adventure'],
     startDate: DateTime(2024, 11, 5),
     endDate: DateTime(2024, 11, 15),
+    imageURL:
+        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ),
   Trip(
     id: '8',
@@ -82,6 +96,8 @@ List<Trip> trips = [
     categories: ['Historical', 'Cultural'],
     startDate: DateTime(2024, 9, 5),
     endDate: DateTime(2024, 9, 15),
+    imageURL:
+        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ),
   Trip(
     id: '9',
@@ -92,6 +108,8 @@ List<Trip> trips = [
     categories: ['Beach', 'Luxury'],
     startDate: DateTime(2024, 12, 20),
     endDate: DateTime(2024, 12, 30),
+    imageURL:
+        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ),
   Trip(
     id: '10',
@@ -102,5 +120,7 @@ List<Trip> trips = [
     categories: ['Mountain', 'Eco-Tourism'],
     startDate: DateTime(2024, 5, 1),
     endDate: DateTime(2024, 5, 10),
+    imageURL:
+        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ),
 ];

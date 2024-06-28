@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training_apps/holiday_app/model/category.dart';
-import 'package:flutter_training_apps/holiday_app/data/mockCategories.dart';
+import 'package:flutter_training_apps/holiday_app/data/mock_categories.dart';
 import 'package:flutter_training_apps/holiday_app/model/trip.dart';
 import 'package:flutter_training_apps/holiday_app/screens/trip_screen.dart';
-import 'package:flutter_training_apps/holiday_app/widgets/categoryItem.dart';
-import 'package:flutter_training_apps/holiday_app/data/mockTrips.dart';
+import 'package:flutter_training_apps/holiday_app/widgets/category_item.dart';
+import 'package:flutter_training_apps/holiday_app/data/mock_trips.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});

@@ -7,6 +7,7 @@ class Trip {
   final List<String> categories;
   final DateTime startDate;
   final DateTime endDate;
+  final String imageURL; // Aggiunto attributo imageURL
 
   Trip({
     required this.id,
@@ -17,10 +18,11 @@ class Trip {
     required this.categories,
     required this.startDate,
     required this.endDate,
+    required this.imageURL, // Inizializzato nell'constructor
   });
 
   @override
   String toString() {
-    return 'Trip{id: $id, title: $title, description: $description, location: $location, cost: $cost, categories: $categories, startDate: $startDate, endDate: $endDate}';
+    return 'Trip{id: $id, title: $title, description: $description, location: $location, cost: $cost, categories: $categories, startDate: $startDate, endDate: $endDate, imageURL: $imageURL}';
   }
 }
