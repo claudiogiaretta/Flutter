@@ -15,11 +15,13 @@ class CategoriesScreen extends StatelessWidget {
         title: const Text('Select your type of holiday'),
       ),
       body: GridView(
+        padding: const EdgeInsets.all(10),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 3 / 2,
-            crossAxisSpacing: 20,
-            mainAxisSpacing: 20),
+          crossAxisCount: 2,
+          childAspectRatio: 3 / 2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
         children: [
           ...categories.map((category) {
             return Categoryitem(category);
