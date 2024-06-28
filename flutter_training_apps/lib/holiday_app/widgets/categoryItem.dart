@@ -8,16 +8,24 @@ class Categoryitem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      margin: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          gradient: LinearGradient(colors: [
-            category.color.withOpacity(0.55),
-            category.color.withOpacity(0.9),
-          ])),
-      child: Text(category.title),
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        padding: const EdgeInsets.all(15),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            gradient: LinearGradient(colors: [
+              category.color.withOpacity(0.55),
+              category.color.withOpacity(0.9),
+            ])),
+        child: Text(
+          category.title,
+          style: const TextStyle(
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),
+      ),
     );
   }
 }
