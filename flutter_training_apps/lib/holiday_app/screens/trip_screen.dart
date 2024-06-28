@@ -11,8 +11,10 @@ class TripScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget content = ListView.builder(
+      itemCount: trips.length,
       itemBuilder: (ctx, index) => Text(
         trips[index].title,
+        style: const TextStyle(color: Colors.white),
       ),
     );
 

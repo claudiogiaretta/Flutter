@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training_apps/holiday_app/screens/categories_screen.dart';
-import 'package:flutter_training_apps/holiday_app/screens/trip_screen.dart';
-import 'package:flutter_training_apps/holiday_app/model/trip.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 final theme = ThemeData(
@@ -24,7 +22,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      home: const TripScreen([], 'asd'),
+      home: const CategoriesScreen(),
     );
   }
 }

@@ -3,13 +3,15 @@ import 'package:flutter_training_apps/dice_roller/gradient_cointainer.dart';
 import 'package:flutter_training_apps/holiday_app/model/category.dart';
 
 class Categoryitem extends StatelessWidget {
-  const Categoryitem(this.category, {super.key});
+  const Categoryitem(this.category, this.onSelectedCategory, {super.key});
   final Category category;
+
+  final Function() onSelectedCategory;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onSelectedCategory,
       child: Container(
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(

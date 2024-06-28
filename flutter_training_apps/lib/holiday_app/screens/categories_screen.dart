@@ -1,12 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training_apps/holiday_app/model/category.dart';
 import 'package:flutter_training_apps/holiday_app/data/mockCategories.dart';
+import 'package:flutter_training_apps/holiday_app/model/trip.dart';
+import 'package:flutter_training_apps/holiday_app/screens/trip_screen.dart';
 import 'package:flutter_training_apps/holiday_app/widgets/categoryItem.dart';
+import 'package:flutter_training_apps/holiday_app/data/mockTrips.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
 
   final List<Category> categories = mockCategories;
+
+  void _onSelectCategory(BuildContext context, Category category) {
+    List<Trip> categoryTrips = trips
+        .where(
+          (trip) => trip.categories.contains(category.title),
+        )
+        .toList();
+
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => TripScreen(categoryTrips, category.title),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +41,9 @@ class CategoriesScreen extends StatelessWidget {
         ),
         children: [
           ...categories.map((category) {
-            return Categoryitem(category);
+            return Categoryitem(category, () {
+              _onSelectCategory(context, category);
+            });
           })
         ],
       ),
