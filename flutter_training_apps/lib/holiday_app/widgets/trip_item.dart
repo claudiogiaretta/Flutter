@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_training_apps/holiday_app/model/trip.dart';
+import 'package:flutter_training_apps/holiday_app/widgets/trip_bottom_caption.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class TripItem extends StatelessWidget {
@@ -10,6 +12,10 @@ class TripItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
+        clipBehavior: Clip.hardEdge,
         child: InkWell(
             onTap: () {},
             child: Stack(
@@ -27,13 +33,23 @@ class TripItem extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 10, vertical: 10),
                         child: Column(children: [
-                          Text(trip.title,
-                              maxLines: 2,
-                              textAlign: TextAlign.center,
-                              softWrap: true,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(color: Colors.white)),
-                          const SizedBox(height: 12)
+                          Text(
+                            trip.title,
+                            maxLines: 2,
+                            textAlign: TextAlign.center,
+                            softWrap: true,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                          const SizedBox(height: 12),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TripBottomCaption(
+                                  trip.cost.toString(), Icons.euro),
+                              TripBottomCaption(trip.location, Icons.flight),
+                            ],
+                          )
                         ]))),
               ],
             )));
