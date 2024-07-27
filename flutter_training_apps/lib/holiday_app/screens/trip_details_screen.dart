@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training_apps/holiday_app/model/trip.dart';
+import 'package:flutter_training_apps/holiday_app/provider/trip_provider.dart';
+import 'package:provider/provider.dart';
 
 class TripDetailsScreen extends StatelessWidget {
   const TripDetailsScreen(this.trip, {super.key});
@@ -8,6 +10,13 @@ class TripDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('asds'), actions: [
+        IconButton(
+            onPressed: () {
+              context.read<TripProvider>().addFavourites(trip);
+            },
+            icon: const Icon(Icons.star))
+      ]),
       body: ListView(
         children: [
           Text(
