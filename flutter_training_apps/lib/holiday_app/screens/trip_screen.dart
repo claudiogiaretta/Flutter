@@ -4,9 +4,9 @@ import 'package:flutter_training_apps/holiday_app/screens/trip_details_screen.da
 import 'package:flutter_training_apps/holiday_app/widgets/trip_item.dart';
 
 class TripScreen extends StatelessWidget {
-  const TripScreen(this.trips, this.title, {super.key});
+  const TripScreen(this.trips, {super.key, this.title});
 
-  final String title;
+  final String? title;
   final List<Trip> trips;
 
   @override
@@ -43,9 +43,14 @@ class TripScreen extends StatelessWidget {
         ),
       );
     }
+
+    if (title == null) {
+      return content;
+    }
+
     return Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          title: Text(title!),
         ),
         body: content);
   }
