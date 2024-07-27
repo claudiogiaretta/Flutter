@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training_apps/holiday_app/screens/categories_screen.dart';
 import 'package:flutter_training_apps/holiday_app/screens/trip_screen.dart';
+import 'package:flutter_training_apps/holiday_app/widgets/home_drawer.dart';
 
 class TabScreen extends StatefulWidget {
   const TabScreen({super.key});
@@ -34,6 +35,7 @@ class _TabScreenState extends State<TabScreen> {
       appBar: AppBar(
         title: Text(activePageTitle),
       ),
+      drawer: HomeDrawer(),
       body: activeTab,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
