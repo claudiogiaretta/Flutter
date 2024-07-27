@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_training_apps/holiday_app/provider/trip_provider.dart';
 import 'package:flutter_training_apps/holiday_app/screens/categories_screen.dart';
 import 'package:flutter_training_apps/holiday_app/screens/trip_screen.dart';
 import 'package:flutter_training_apps/holiday_app/widgets/home_drawer.dart';
+import 'package:provider/provider.dart';
 
 class TabScreen extends StatefulWidget {
   const TabScreen({super.key});
@@ -27,7 +29,7 @@ class _TabScreenState extends State<TabScreen> {
     var activePageTitle = 'Categories';
 
     if (_selectedPage == 1) {
-      activeTab = const TripScreen([]);
+      activeTab = TripScreen(context.watch<TripProvider>().favourites);
       activePageTitle = 'My trips';
     }
 
@@ -35,7 +37,7 @@ class _TabScreenState extends State<TabScreen> {
       appBar: AppBar(
         title: Text(activePageTitle),
       ),
-      drawer: HomeDrawer(),
+      drawer: const HomeDrawer(),
       body: activeTab,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
@@ -43,7 +45,7 @@ class _TabScreenState extends State<TabScreen> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Categories'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.trip_origin), label: 'My trips')
+              icon: Icon(Icons.travel_explore), label: 'My trips')
         ],
       ),
     );

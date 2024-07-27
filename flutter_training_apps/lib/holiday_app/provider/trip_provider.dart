@@ -9,8 +9,17 @@ class TripProvider extends ChangeNotifier {
   UnmodifiableListView<Trip> get favourites =>
       UnmodifiableListView(_favourites);
 
+  bool isFavourite(trip) {
+    return _favourites.contains(trip);
+  }
+
   void addFavourites(trip) {
     _favourites.add(trip);
+    notifyListeners();
+  }
+
+  void removeFavourites(trip) {
+    _favourites.remove(trip);
     notifyListeners();
   }
 }

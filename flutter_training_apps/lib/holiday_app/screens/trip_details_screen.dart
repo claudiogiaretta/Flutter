@@ -9,13 +9,18 @@ class TripDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isFavourite = context.watch<TripProvider>().isFavourite(trip);
     return Scaffold(
       appBar: AppBar(title: Text('asds'), actions: [
         IconButton(
             onPressed: () {
-              context.read<TripProvider>().addFavourites(trip);
+              !isFavourite
+                  ? context.read<TripProvider>().addFavourites(trip)
+                  : context.read<TripProvider>().removeFavourites(trip);
             },
-            icon: const Icon(Icons.star))
+            icon: isFavourite
+                ? const Icon(Icons.star)
+                : const Icon(Icons.star_border))
       ]),
       body: ListView(
         children: [
