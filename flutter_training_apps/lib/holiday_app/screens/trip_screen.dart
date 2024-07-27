@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_training_apps/holiday_app/model/trip.dart';
 import 'package:flutter_training_apps/holiday_app/screens/trip_details_screen.dart';
 import 'package:flutter_training_apps/holiday_app/widgets/trip_item.dart';
@@ -10,20 +9,20 @@ class TripScreen extends StatelessWidget {
   final String title;
   final List<Trip> trips;
 
-  void onSelectedTrip(BuildContext context, String title) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (ctx) => TripDetailsScreen(title),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
+    void onSelectedTrip(Trip trip) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (ctx) => TripDetailsScreen(trip),
+        ),
+      );
+    }
+
     Widget content = ListView.builder(
       itemCount: trips.length,
       itemBuilder: (ctx, index) => TripItem(trips[index], () {
-        onSelectedTrip(ctx, trips[index].title);
+        onSelectedTrip(trips[index]);
       }),
     );
 

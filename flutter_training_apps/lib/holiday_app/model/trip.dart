@@ -7,7 +7,9 @@ class Trip {
   final List<String> categories;
   final DateTime startDate;
   final DateTime endDate;
-  final String imageURL; // Aggiunto attributo imageURL
+  final String imageURL;
+  final List<String> itinerary; // Update this line
+  final List<String> activities; // Update this line
 
   Trip({
     required this.id,
@@ -18,11 +20,8 @@ class Trip {
     required this.categories,
     required this.startDate,
     required this.endDate,
-    required this.imageURL, // Inizializzato nell'constructor
+    required this.imageURL,
+    required this.itinerary, // Update this line
+    required this.activities,
   });
-
-  @override
-  String toString() {
-    return 'Trip{id: $id, title: $title, description: $description, location: $location, cost: $cost, categories: $categories, startDate: $startDate, endDate: $endDate, imageURL: $imageURL}';
-  }
 }
