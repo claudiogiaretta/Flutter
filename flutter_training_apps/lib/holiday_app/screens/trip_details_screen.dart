@@ -27,8 +27,9 @@ class TripDetailsScreen extends StatelessWidget {
       body: ListView(
         children: [
           Image.network(trip.imageURL),
-          Activities(trip.activities),
           const SizedBox(height: 10),
+          Activities(trip.activities),
+          const SizedBox(height: 20),
           Itinerary(trip.itinerary)
         ],
       ),

@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class ItineraryItem extends StatelessWidget {
-  const ItineraryItem({super.key});
+  const ItineraryItem(this.activity, this.index, {super.key});
+
+  final int index;
+  final String activity;
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +18,14 @@ class ItineraryItem extends StatelessWidget {
             margin: const EdgeInsets.all(10),
             decoration:
                 const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
-            child: Text('1'),
+            child: Text("${index + 1}"),
           ),
           Expanded(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Title',
+                  activity,
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         color: Theme.of(context).colorScheme.onSurface,
                       ),
