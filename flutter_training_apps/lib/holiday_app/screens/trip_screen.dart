@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training_apps/holiday_app/model/trip.dart';
-import 'package:flutter_training_apps/holiday_app/provider/trip_provider.dart';
 import 'package:flutter_training_apps/holiday_app/screens/trip_details_screen.dart';
 import 'package:flutter_training_apps/holiday_app/widgets/trip_item.dart';
-import 'package:provider/provider.dart';
 
 class TripScreen extends StatelessWidget {
   const TripScreen(this.trips, {super.key, this.title});
@@ -33,11 +31,11 @@ class TripScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
+            Text(
               '404',
               style: TextStyle(color: Colors.white),
             ),
-            const Text(
+            Text(
               'Try select another categories',
               style: TextStyle(color: Colors.white),
             )

@@ -19,8 +19,8 @@ class Itinerary extends StatelessWidget {
         const SizedBox(
           height: 15,
         ),
-        ...itinerary.asMap().entries.map((activity) {
-          return ItineraryItem(activity.value, activity.key);
+        ...itinerary.asMap().entries.map((itineraryItem) {
+          return ItineraryItem(itineraryItem.value, itineraryItem.key);
         })
       ],
     );

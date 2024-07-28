@@ -1,5 +1,6 @@
 import 'package:flutter_training_apps/holiday_app/model/trip.dart';
 
+const String path = 'assets/assets_travel_app/';
 List<Trip> trips = [
   Trip(
     id: '1',
@@ -10,8 +11,7 @@ List<Trip> trips = [
     categories: ['Beach', 'Luxury'],
     startDate: DateTime(2024, 7, 1),
     endDate: DateTime(2024, 7, 10),
-    imageURL:
-        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageURL: '${path}beach.jpg',
     itinerary: [
       'Day 1: Arrival and check-in',
       'Day 2: Beach day',
@@ -42,8 +42,7 @@ List<Trip> trips = [
     categories: ['Mountain', 'Adventure'],
     startDate: DateTime(2024, 8, 15),
     endDate: DateTime(2024, 8, 25),
-    imageURL:
-        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageURL: '${path}mountain.jpg',
     itinerary: [
       'Day 1: Arrival and check-in',
       'Day 2: Hiking',
@@ -73,8 +72,7 @@ List<Trip> trips = [
     categories: ['City Break', 'Historical', 'Cultural'],
     startDate: DateTime(2024, 9, 10),
     endDate: DateTime(2024, 9, 20),
-    imageURL:
-        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageURL: '${path}city.jpg',
     itinerary: [
       'Day 1: Arrival and check-in',
       'Day 2: Colosseum tour',
@@ -104,8 +102,7 @@ List<Trip> trips = [
     categories: ['Safari', 'Adventure'],
     startDate: DateTime(2024, 7, 20),
     endDate: DateTime(2024, 7, 30),
-    imageURL:
-        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageURL: '${path}safari.jpg',
     itinerary: [
       'Day 1: Arrival and check-in',
       'Day 2: Safari drive',
@@ -135,8 +132,7 @@ List<Trip> trips = [
     categories: ['Cultural', 'City Break'],
     startDate: DateTime(2024, 10, 1),
     endDate: DateTime(2024, 10, 10),
-    imageURL:
-        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageURL: '${path}tokyo.jpg',
     itinerary: [
       'Day 1: Arrival and check-in',
       'Day 2: City tour',
@@ -166,8 +162,7 @@ List<Trip> trips = [
     categories: ['Cruise', 'Luxury'],
     startDate: DateTime(2024, 6, 15),
     endDate: DateTime(2024, 6, 25),
-    imageURL:
-        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageURL: '${path}cruise.jpg',
     itinerary: [
       'Day 1: Arrival and check-in',
       'Day 2: At sea',
@@ -198,8 +193,7 @@ List<Trip> trips = [
     categories: ['Eco-Tourism', 'Adventure'],
     startDate: DateTime(2024, 11, 5),
     endDate: DateTime(2024, 11, 15),
-    imageURL:
-        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageURL: '${path}costa_rica.jpg',
     itinerary: [
       'Day 1: Arrival and check-in',
       'Day 2: Rainforest tour',
@@ -229,8 +223,7 @@ List<Trip> trips = [
     categories: ['Historical', 'Cultural'],
     startDate: DateTime(2024, 9, 5),
     endDate: DateTime(2024, 9, 15),
-    imageURL:
-        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageURL: '${path}egypt.jpg',
     itinerary: [
       'Day 1: Arrival and check-in',
       'Day 2: Pyramids tour',
@@ -260,8 +253,7 @@ List<Trip> trips = [
     categories: ['Beach', 'Luxury'],
     startDate: DateTime(2024, 12, 20),
     endDate: DateTime(2024, 12, 30),
-    imageURL:
-        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageURL: '${path}caribbean.jpg',
     itinerary: [
       'Day 1: Arrival and check-in',
       'Day 2: Beach day',
@@ -291,8 +283,7 @@ List<Trip> trips = [
     categories: ['Mountain', 'Eco-Tourism'],
     startDate: DateTime(2024, 5, 1),
     endDate: DateTime(2024, 5, 10),
-    imageURL:
-        'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageURL: '${path}rocky_mountain.jpg',
     itinerary: [
       'Day 1: Arrival and check-in',
       'Day 2: Hiking',

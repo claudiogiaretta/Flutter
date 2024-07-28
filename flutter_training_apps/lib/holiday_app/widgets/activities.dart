@@ -7,11 +7,11 @@ class Activities extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> UIActivities = [];
+    List<Widget> uiActivities = [];
 
     for (var activity in activities) {
-      UIActivities.add(SizedBox(width: 10));
-      UIActivities.add(
+      uiActivities.add(const SizedBox(width: 10));
+      uiActivities.add(
         Container(
           padding: const EdgeInsets.all(8),
           decoration: const BoxDecoration(
@@ -40,7 +40,7 @@ class Activities extends StatelessWidget {
         ),
         Wrap(
           runSpacing: 8.0, // gap between lines
-          children: [...UIActivities],
+          children: [...uiActivities],
         ),
       ],
     );

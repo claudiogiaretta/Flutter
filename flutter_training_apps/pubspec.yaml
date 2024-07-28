@@ -71,6 +71,16 @@ flutter:
     - assets\images\dice-5.png
     - assets\images\dice-6.png
     - assets\assets_quiz\images\quiz-logo.png
+    - assets\assets_travel_app\beach.jpg
+    - assets\assets_travel_app\caribbean.jpg
+    - assets\assets_travel_app\city.jpg
+    - assets\assets_travel_app\costa_rica.jpg
+    - assets\assets_travel_app\tokyo.jpg
+    - assets\assets_travel_app\rocky_mountain.jpg
+    - assets\assets_travel_app\mountain.jpg
+    - assets\assets_travel_app\cruise.jpg
+    - assets\assets_travel_app\safari.jpg
+    - assets\assets_travel_app\egypt.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

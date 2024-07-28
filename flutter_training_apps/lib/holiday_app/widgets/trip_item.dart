@@ -22,7 +22,7 @@ class TripItem extends StatelessWidget {
           children: [
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
-              image: NetworkImage(trip.imageURL),
+              image: AssetImage(trip.imageURL),
             ),
             Positioned(
               bottom: 0,
