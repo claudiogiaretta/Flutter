@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training_apps/holiday_app/model/trip.dart';
 import 'package:flutter_training_apps/holiday_app/provider/trip_provider.dart';
+import 'package:flutter_training_apps/holiday_app/widgets/activities.dart';
+import 'package:flutter_training_apps/holiday_app/widgets/itinerary.dart';
 import 'package:provider/provider.dart';
 
 class TripDetailsScreen extends StatelessWidget {
@@ -11,7 +13,7 @@ class TripDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isFavourite = context.watch<TripProvider>().isFavourite(trip);
     return Scaffold(
-      appBar: AppBar(title: Text('asds'), actions: [
+      appBar: AppBar(title: Text(trip.title), actions: [
         IconButton(
             onPressed: () {
               !isFavourite
@@ -32,44 +34,8 @@ class TripDetailsScreen extends StatelessWidget {
             ),
           ),
           Image.network(trip.imageURL),
-          Text(
-            'Acrivities',
-            style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  color: Theme.of(context).colorScheme.onSurface,
-                ),
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          ...trip.activities.map(
-            (activity) {
-              return Text(
-                activity,
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: Theme.of(context).colorScheme.onSurface,
-                    ),
-              );
-            },
-          ),
-          Text(
-            'Itinerary',
-            style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  color: Theme.of(context).colorScheme.onSurface,
-                ),
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          ...trip.itinerary.map(
-            (itineraryItem) {
-              return Text(
-                itineraryItem,
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: Theme.of(context).colorScheme.onSurface,
-                    ),
-              );
-            },
-          ),
+          Activities(trip.activities),
+          Itinerary(trip.itinerary)
         ],
       ),
     );
