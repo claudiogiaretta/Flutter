@@ -7,8 +7,8 @@ import 'package:provider/provider.dart';
 final theme = ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
-    brightness: Brightness.dark,
-    seedColor: const Color.fromARGB(255, 131, 57, 0),
+    brightness: Brightness.light,
+    seedColor: const Color.fromARGB(255, 0, 97, 252),
   ),
   textTheme: GoogleFonts.latoTextTheme(),
 );

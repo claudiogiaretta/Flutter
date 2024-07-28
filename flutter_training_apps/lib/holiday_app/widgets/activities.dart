@@ -16,7 +16,7 @@ class Activities extends StatelessWidget {
           padding: const EdgeInsets.all(8),
           decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
-              color: Colors.red),
+              color: Color.fromARGB(255, 88, 152, 255)),
           child: Text(
             activity,
             style: Theme.of(context).textTheme.bodyMedium!.copyWith(

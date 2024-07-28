@@ -15,8 +15,9 @@ class ItineraryItem extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(20),
             margin: const EdgeInsets.all(10),
-            decoration:
-                const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+            decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Color.fromARGB(255, 88, 152, 255)),
             child: Text("${index + 1}"),
           ),
           Expanded(
