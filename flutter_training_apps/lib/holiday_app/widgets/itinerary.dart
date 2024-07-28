@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_training_apps/holiday_app/widgets/itinerary_item.dart';
 
 class Itinerary extends StatelessWidget {
   const Itinerary(this.itinerary, {super.key});
@@ -18,16 +19,9 @@ class Itinerary extends StatelessWidget {
         const SizedBox(
           height: 15,
         ),
-        ...itinerary.map(
-          (activity) {
-            return Text(
-              activity,
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    color: Theme.of(context).colorScheme.onSurface,
-                  ),
-            );
-          },
-        ),
+        ...itinerary.map((activity) {
+          return ItineraryItem();
+        }),
       ],
     );
   }

@@ -28,6 +28,7 @@ class TripDetailsScreen extends StatelessWidget {
         children: [
           Image.network(trip.imageURL),
           Activities(trip.activities),
+          const SizedBox(height: 10),
           Itinerary(trip.itinerary)
         ],
       ),
