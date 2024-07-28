@@ -26,13 +26,6 @@ class TripDetailsScreen extends StatelessWidget {
       ]),
       body: ListView(
         children: [
-          Text(
-            trip.title,
-            style: const TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
           Image.network(trip.imageURL),
           Activities(trip.activities),
           Itinerary(trip.itinerary)
