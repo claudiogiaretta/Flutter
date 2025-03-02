@@ -3,4 +3,4 @@ This repository contains my Flutter training exercises and projects. It serves a
 
 ## Course Reference
 Some of the exercises in this repository are based on the Udemy course:
-[Flutter & Dart - The Complete Guide](https://tahseer-notes.netlify.app/notes/apps/)
+[Flutter & Dart - The Complete Guide](https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/?couponCode=LETSLEARNNOW)
